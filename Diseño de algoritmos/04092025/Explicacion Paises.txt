@@ -1,0 +1,34 @@
+El código en "Api Paises.py" realiza lo siguiente paso a paso:
+
+Importa la librería requests para hacer solicitudes HTTP.
+
+Define la función obtener_datos_api() que:
+
+Define la URL de la API que devuelve información de países de Europa.
+Hace una solicitud GET a esa URL.
+Convierte la respuesta JSON en un objeto de Python.
+Devuelve ese objeto JSON.
+Llama a obtener_datos_api() y guarda el resultado en la variable datos_api.
+
+Crea una lista vacía llamada nombres_paises.
+
+Recorre cada país en datos_api y extrae el nombre común del país (pais["name"]["common"]), agregándolo a la lista nombres_paises.
+
+Solicita al usuario que ingrese el nombre de un país y guarda la entrada en nombre_pais_usuario.
+
+Define la función buscar_pais_lineal(lista_datos) que:
+
+Crea una lista vacía urls_encontradas.
+Recorre cada país en la lista de datos.
+Si el nombre común del país coincide con el nombre ingresado por el usuario, agrega la URL de Google Maps de ese país a urls_encontradas y la retorna.
+Si no encuentra el país, retorna "No se encontró".
+Imprime el resultado de llamar a buscar_pais_lineal(datos_api).
+
+Ordena alfabéticamente la lista nombres_paises.
+
+Define la función buscar_pais_binaria(lista_api, lista_nombres, pais_buscado) que:
+
+Implementa una búsqueda binaria para encontrar el país en la lista ordenada lista_nombres.
+Si encuentra el país, recorre lista_api para obtener y retornar la URL de Google Maps correspondiente.
+Si no lo encuentra, retorna "No se encontró".
+Imprime el resultado de llamar a buscar_pais_binaria(datos_api, nombres_paises, nombre_pais_usuario).
